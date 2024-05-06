@@ -9,7 +9,7 @@ class VehicleController extends Controller
 {
     public function index(){
         $user = Auth::user();
-        $vehicles = $user->vehicles()->orderBy('created_at','DESC')->paginate();
+        $vehicles = $user->vehicles()->orderBy('created_at','DESC')->paginate(10);
         return view('vehicles.index', compact('vehicles','user'));
     }
 

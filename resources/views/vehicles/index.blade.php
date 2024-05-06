@@ -23,7 +23,12 @@
                             @foreach($vehicles as $vehicle)
                             <tr>
                                 <th scope="row">#{{ $vehicle->id }}</th>
-                                <td>{{ $vehicle->vehicle_number }}</td>
+                                <td>
+                                    {{ $vehicle->vehicle_number }}
+                                    @if($vehicle->id == $user->vehicle_id)
+                                        <span class="badge bg-success">Primary</span>
+                                    @endif
+                                </td>
                                 <td>{{ $vehicle->milage }}</td>
                                 <td>{{ $vehicle->fuel_consumption }}</td>
                                 <td>
@@ -37,6 +42,7 @@
                           @endforeach
                         </tbody>
                       </table>
+                      {{ $vehicles->links() }}
                 </div>
             </div>
         </div>
