@@ -4,7 +4,8 @@ Laravel gps tracker is refers to connect with the one location to other location
 
 ### Install & setup
 
-composer install
+composer install\
+npm install && npm run dev
 
 ## .env file setup
 
