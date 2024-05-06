@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "9446c5eb-6db0-4a6b-a130-7712e1b50a46",
+		"name": "Gps tracking system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12086969"
+	},
+	"item": [
+		{
+			"name": "Update driver location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|by5qR9VjUL9Fvi3J6Cg56WPysTYLgNUu8S8i7J8kc3716380",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"lat\":\"26.898738\",\n    \"lng\":\"80.948068\",\n    \"ridehash\": \"6638bb082ec1b\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/api/update/driver/location",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"api",
+						"update",
+						"driver",
+						"location"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "26.872693",
+							"disabled": true
+						},
+						{
+							"key": "lng",
+							"value": "80.941270",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"alok.singh3286@gmail.com\",\n    \"password\":\"Welcome@12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{apiUrl}}/api/login",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"alok.singh3286@gmail.com\",\n    \"password\":\"Welcome@12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/api/login",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 May 2024 10:47:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"User Logged In Successfully\",\n    \"token\": \"1|by5qR9VjUL9Fvi3J6Cg56WPysTYLgNUu8S8i7J8kc3716380\",\n    \"user\": {\n        \"id\": 15,\n        \"name\": \"Alok Singh\",\n        \"email\": \"alok.singh3286@gmail.com\",\n        \"email_verified_at\": null,\n        \"location\": \"Chand ganj garden\",\n        \"created_at\": \"2024-05-04T14:49:04.000000Z\",\n        \"updated_at\": \"2024-05-06T09:52:19.000000Z\",\n        \"lat\": 26.8794292,\n        \"lng\": 80.9423563,\n        \"vehicle_id\": 3\n    }\n}"
+				}
+			]
+		}
+	]
+}
