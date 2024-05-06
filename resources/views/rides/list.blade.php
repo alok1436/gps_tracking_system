@@ -32,7 +32,7 @@
                                     {{ $location->source->location }} to {{ $location->destination->location }}
                                 </td>
                                 <td>{{ $ride->company ? $ride->company->name : '' }}</td>
-                                <td>{{ $ride->status }}</td>
+                                <td><span class="badge bg-{{ $ride->status == 'Completed' ? 'success' : 'warning' }}">{{ $ride->status }}</span></td>
                                 <td>{{ $ride->created_at }}</td>
                                 <td>{{ $ride->completed_at }}</td>
                                 <td>
