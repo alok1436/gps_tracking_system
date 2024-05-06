@@ -32,12 +32,16 @@ PUSHER_APP_SECRET=\
 PUSHER_HOST=\
 PUSHER_PORT=443\
 PUSHER_SCHEME="https"\
-PUSHER_APP_CLUSTER="ap2"\
+PUSHER_APP_CLUSTER="ap2"
 
-GOOGLE_MAP_API_KEY=AIzaSyCx8_IVzBztVFQlBQzyS6TL9qDUlkUZobI\
+GOOGLE_MAP_API_KEY=
 
 BROADCAST_CONNECTION=pusher\
-QUEUE_CONNECTION=sync\
+QUEUE_CONNECTION=sync
+
+##keep the queue with notification on
+
+php artisan queue:work --queue=notifications
 
 ## Contributing
 
