@@ -15,7 +15,8 @@ Change the database name, user and password
 
 ## Run migrations
 
-php artisan migrate
+php artisan migrate\
+php artisan db:seed
 
 ## Clear application cache
 
