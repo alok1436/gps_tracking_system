@@ -26,7 +26,7 @@ php artisan serve
 
 ## other .env changes
 
-PUSHER_APP_ID=\n
+PUSHER_APP_ID=\n\t
 PUSHER_APP_KEY=
 PUSHER_APP_SECRET=
 PUSHER_HOST=
